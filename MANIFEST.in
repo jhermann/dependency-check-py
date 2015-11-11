@@ -1,0 +1,6 @@
+#
+# Source Distribution Manifest
+#
+# More at https://docs.python.org/2/distutils/sourcedist.html
+
+include LICENSE requirements.txt *-requirements.txt
