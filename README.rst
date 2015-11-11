@@ -11,6 +11,8 @@ dependency-check
 
 Shim to easily install OWASP dependency-check-cli into Python projects.
 
+.. _setup-start:
+
 Usage
 -----
 

@@ -76,7 +76,7 @@ with io.open(script_name, encoding='utf-8') as handle:
 project.update(dict(
     py_modules=[project['name'].replace('-', '_')],
     description=__doc__.split('.')[0].split(' - ', 1)[1].strip(),
-    long_description=io.open('README.rst', encoding='UTF-8').read().rstrip(),
+    long_description=io.open('README.rst', encoding='UTF-8').read().split('\n.. _setup-start:', 1)[-1].strip(),
     classifiers=[i.strip() for i in classifiers.splitlines() if i.strip() and not i.strip().startswith('#')],
 ))
 
