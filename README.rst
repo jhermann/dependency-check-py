@@ -18,3 +18,22 @@ Usage
 
 Installation
 ------------
+
+*dependency-check* can be installed via ``pip install dependency-check`` as usual,
+see `releases <https://github.com/jhermann/dependency-check/releases>`_ for an overview of available versions.
+To get a bleeding-edge version from source, use these commands::
+
+    repo="jhermann/dependency-check"
+    pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+    pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+
+As a developer, to create a working directory for this project, call these commands::
+
+    git clone "https://github.com/jhermann/dependency-check.git"
+    cd "dependency-check"
+    . .env --yes --develop
+    invoke build check
+
+You might also need to follow some
+`setup procedures <https://py-generic-project.readthedocs.org/en/latest/installing.html#quick-setup>`_
+to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
