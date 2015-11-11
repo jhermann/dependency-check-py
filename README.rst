@@ -5,11 +5,11 @@ dependency-check
     :target: https://pypi.python.org/pypi/dependency-check
     :alt: Latest PyPI version
 
-.. image:: https://travis-ci.org/jhermann/depenency-check-py.png
-   :target: https://travis-ci.org/jhermann/depenency-check-py
+.. image:: https://travis-ci.org/jhermann/dependency-check-py.png
+   :target: https://travis-ci.org/jhermann/dependency-check-py
    :alt: Latest Travis CI build status
 
-Shim to easily install OWASP depenency-check-cli into Python projects.
+Shim to easily install OWASP dependency-check-cli into Python projects.
 
 Usage
 -----

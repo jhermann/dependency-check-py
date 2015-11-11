@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=invalid-name
 """
-    dependency-check - Shim to easily install OWASP depenency-check-cli into Python projects.
+    dependency-check - Shim to easily install OWASP dependency-check-cli into Python projects.
 
     Copyright ©  2015 Jürgen Hermann <jh@web.de>
 

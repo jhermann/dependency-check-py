@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    dependency-check - Shim to easily install OWASP depenency-check-cli into Python projects
+    dependency-check - Shim to easily install OWASP dependency-check-cli into Python projects.
 """
 from __future__ import absolute_import, unicode_literals, print_function
 
