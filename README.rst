@@ -20,17 +20,17 @@ Installation
 ------------
 
 *dependency-check* can be installed via ``pip install dependency-check`` as usual,
-see `releases <https://github.com/jhermann/dependency-check/releases>`_ for an overview of available versions.
+see `releases <https://github.com/jhermann/dependency-check-py/releases>`_ for an overview of available versions.
 To get a bleeding-edge version from source, use these commands::
 
-    repo="jhermann/dependency-check"
+    repo="jhermann/dependency-check-py"
     pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+    pip install -UI -e "git+https://github.com/$repo.git#egg=dependency-check"
 
 As a developer, to create a working directory for this project, call these commands::
 
-    git clone "https://github.com/jhermann/dependency-check.git"
-    cd "dependency-check"
+    git clone "https://github.com/jhermann/dependency-check-py.git"
+    cd "dependency-check-py"
     . .env --yes --develop
     invoke build check
 
