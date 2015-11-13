@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=invalid-name
+# pylint: disable=locally-disabled, invalid-name
 """
     dependency-check - Shim to easily install OWASP dependency-check-cli into Python projects.
 
@@ -84,21 +84,26 @@ import sys
 try:
     from setuptools import setup
 except ImportError as exc:
-    raise RuntimeError("Cannot install '{0}', setuptools is missing ({1})".format(project['name'], exc))
+    raise RuntimeError("Cannot install '{0}', setuptools is missing ({1})"
+                       .format(project['name'], exc))
 
 project_root = os.path.abspath(os.path.dirname(__file__))
 script_name = os.path.join(project_root, project['py_modules'][0] + '.py')
 expected_keys = "version author author_email".split()
 with io.open(script_name, encoding='utf-8') as handle:
     for line in handle:
-        match = re.match(r"""^__({})__ += (?P<q>['"])(.+?)(?P=q)$""".format('|'.join(expected_keys)), line)
+        match = re.match(r"""^__({})__ += (?P<q>['"])(.+?)(?P=q)$"""
+                         .format('|'.join(expected_keys)), line)
         if match:
             project[match.group(1)] = match.group(3)
 
 project.update(dict(
     description=__doc__.split('.')[0].split(' - ', 1)[1].strip(),
-    long_description=io.open('README.rst', encoding='UTF-8').read().split('\n.. _setup-start:', 1)[-1].strip(),
-    classifiers=[i.strip() for i in classifiers.splitlines() if i.strip() and not i.strip().startswith('#')],
+    long_description=(io.open('README.rst', encoding='UTF-8').read()
+                      .split('\n.. _setup-start:', 1)[-1].strip()),
+    classifiers=[i.strip()
+                 for i in classifiers.splitlines()
+                 if i.strip() and not i.strip().startswith('#')],
     keywords=project['keywords'].replace(',', ' ').strip().split(),
 ))
 
