@@ -53,7 +53,7 @@ project = dict(
     #   classifiers (see below)
 )
 
-classifiers="""
+classifiers = """
 # Details at http://pypi.python.org/pypi?:action=list_classifiers
 Development Status :: 3 - Alpha
 #Development Status :: 4 - Beta
