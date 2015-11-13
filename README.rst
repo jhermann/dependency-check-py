@@ -41,7 +41,7 @@ to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Wind
     :target: https://coveralls.io/r/jhermann/dependency-check-py
 .. |GitHub Issues| image:: https://img.shields.io/github/issues/jhermann/dependency-check-py.svg
     :target: https://github.com/jhermann/dependency-check-py/issues
-.. |License| image:: https://img.shields.io/pypi/l/{{ cookiecutter.repos_name }}.svg
+.. |License| image:: https://img.shields.io/pypi/l/dependency-check.svg
     :target: https://github.com/jhermann/dependency-check-py/blob/master/LICENSE
 .. |Development Status| image:: https://pypip.in/status/dependency-check/badge.svg
     :target: https://pypi.python.org/pypi/dependency-check/
