@@ -5,12 +5,26 @@ dependency-check
  |Development Status|  |Latest Version|  |Download format|  |Downloads|
 
 
-Shim to easily install OWASP dependency-check-cli into Python projects.
+Shim to easily install the `OWASP dependency-check-cli`_ tool into Python projects.
 
 .. _setup-start:
 
+``dependency-check`` can be used to scan application dependencies to identify if there are any
+known, published vulnerabilities related to any of the libraries used.
+It runs in the JVM, so you need some form of ``java`` available in your ``PATH``.
+
+
 Usage
 -----
+
+To install from PyPI, add ``dependency-check`` to your ``dev-requirements.txt``
+or a similar file. For more installation options, see the next section.
+
+To just get the ``dependency-check`` CLI tool installed into your home,
+you can use the `pip script installer`_.
+
+Please see the `DependencyCheck site`_ for more configuration and usage details.
+
 
 Installation
 ------------
@@ -34,6 +48,10 @@ You might also need to follow some
 `setup procedures <https://py-generic-project.readthedocs.org/en/latest/installing.html#quick-setup>`_
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
+
+.. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
+.. _`DependencyCheck site`: https://www.owasp.org/index.php/OWASP_Dependency_Check
+.. _`pip script installer`: https://github.com/mitsuhiko/pipsi#pipsi
 
 .. |Travis CI| image:: https://api.travis-ci.org/jhermann/dependency-check-py.svg
     :target: https://travis-ci.org/jhermann/dependency-check-py
