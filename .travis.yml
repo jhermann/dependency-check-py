@@ -1,0 +1,17 @@
+#
+# Travis Project Descriptor
+#
+# See http://docs.travis-ci.com/user/build-configuration/
+#
+
+# build matrix
+language: python
+python:
+    - "2.7"
+
+# command to install dependencies
+install:
+    - "pip install -r dev-requirements.txt"
+
+# command to run tests
+script: invoke selfcheck

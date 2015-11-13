@@ -5,3 +5,11 @@
 from __future__ import absolute_import, unicode_literals
 
 from rituals.easy import *  # pylint: disable=redefined-builtin
+
+
+@task(pre=[clean])
+def selfcheck(ctx):
+    """Perform integration tests."""
+    ctx.run("dependency-check .")
+
+namespace.add_task(selfcheck)
