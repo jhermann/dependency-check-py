@@ -9,8 +9,8 @@ Shim to easily install the `OWASP dependency-check-cli`_ tool into Python projec
 
 .. _setup-start:
 
-``dependency-check`` can be used to scan application dependencies to identify if there are any
-known, published vulnerabilities related to any of the libraries used.
+``dependency-check`` scans application dependencies and checks whether they contain any published vulnerabilities
+(based on the NIST `NVD`_).
 It runs in the JVM, so you need some form of ``java`` available in your ``PATH``.
 
 
@@ -49,6 +49,7 @@ You might also need to follow some
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
 
+.. _`NVD`: https://nvd.nist.gov/
 .. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
 .. _`DependencyCheck site`: https://www.owasp.org/index.php/OWASP_Dependency_Check
 .. _`pip script installer`: https://github.com/mitsuhiko/pipsi#pipsi
