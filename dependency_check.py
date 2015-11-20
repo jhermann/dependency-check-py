@@ -25,14 +25,9 @@ __author_email__ = 'jh@web.de'
 
 import os
 import sys
-import time
-import errno
-import codecs
 import shutil
-import logging
 import urllib2
 import zipfile
-import argparse
 import tempfile
 import subprocess
 from contextlib import closing
@@ -57,7 +52,7 @@ def install():
         dc_url = os.environ.get('DEPENDENCY_CHECK_URL', DEPENDENCY_CHECK_URL)
         dc_version = os.environ.get('DEPENDENCY_CHECK_VERSION', DEPENDENCY_CHECK_VERSION)
         dc_url = dc_url.format(version=dc_version)
-        ok = False
+        install_ok = False
 
         with tempfile.NamedTemporaryFile(suffix='.zip', prefix='dependency-check-', delete=False) as zip_temp:
             try:
@@ -80,9 +75,9 @@ def install():
                                 with open(out_path, 'wb') as out:
                                     shutil.copyfileobj(inp, out)
                 os.chmod(os.path.join(dc_home, 'bin', 'dependency-check.sh'), 0755)
-                ok = True
+                install_ok = True
             finally:
-                if not ok and os.path.exists(dc_command):
+                if not install_ok and os.path.exists(dc_command):
                     os.remove(dc_command)
                 if os.path.exists(zip_temp.name):
                     os.remove(zip_temp.name)
