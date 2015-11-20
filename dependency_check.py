@@ -1,6 +1,20 @@
 # -*- coding: utf-8 -*-
 """
     dependency-check - Shim to easily install OWASP dependency-check-cli into Python projects.
+
+    Copyright ©  2015 Jürgen Hermann <jh@web.de>
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 """
 from __future__ import absolute_import, unicode_literals, print_function
 
@@ -43,6 +57,7 @@ def install():
         dc_url = os.environ.get('DEPENDENCY_CHECK_URL', DEPENDENCY_CHECK_URL)
         dc_version = os.environ.get('DEPENDENCY_CHECK_VERSION', DEPENDENCY_CHECK_VERSION)
         dc_url = dc_url.format(version=dc_version)
+        ok = False
 
         with tempfile.NamedTemporaryFile(suffix='.zip', prefix='dependency-check-', delete=False) as zip_temp:
             try:
@@ -65,7 +80,10 @@ def install():
                                 with open(out_path, 'wb') as out:
                                     shutil.copyfileobj(inp, out)
                 os.chmod(os.path.join(dc_home, 'bin', 'dependency-check.sh'), 0755)
+                ok = True
             finally:
+                if not ok and os.path.exists(dc_command):
+                    os.remove(dc_command)
                 if os.path.exists(zip_temp.name):
                     os.remove(zip_temp.name)
 
