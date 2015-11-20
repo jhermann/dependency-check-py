@@ -9,71 +9,78 @@ __author__ = 'Jürgen Hermann'
 __author_email__ = 'jh@web.de'
 
 
+import os
 import sys
 import time
 import errno
 import codecs
+import shutil
 import logging
+import urllib2
+import zipfile
 import argparse
+import tempfile
+import subprocess
+from contextlib import closing
 
 
-def setup():
-    """Set up runtime environment."""
-    sys.stdout = codecs.getwriter('utf8')(sys.stdout)
-    sys.stderr = codecs.getwriter('utf8')(sys.stderr)
-    logging.basicConfig(level=logging.INFO)
+DEPENDENCY_CHECK_VERSION = '1.3.1'
+DEPENDENCY_CHECK_URL = 'https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip'
 
 
-def make_argparser():
-    """Create a parser instance for this tool's options."""
-    parser = argparse.ArgumentParser(description=__doc__.split('\n    Copyright ', 1)[0])
-
-    parser.add_argument('-V', '--version', action='store_true', default=False,
-                        help="show version number and exit")
-    parser.add_argument('-q', '--quiet', action='store_true', default=False,
-                        help="reduce logging output")
-    parser.add_argument('-v', '--verbose', action='store_true', default=False,
-                        help="increase logging output")
-
-    args = parser.parse_args()
-
-    if args.version:
-        print(__version__)
-        sys.exit(0)
-
-    if args.verbose and args.quiet:
-        parser.error("Cannot be both quiet and verbose!")
-    elif args.quiet:
-        logging.getLogger().setLevel(logging.WARNING)
-    elif args.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
-
-    return parser, args
+def install_path():
+    """Return the target path for installation of ``dependency-check-cli``."""
+    return os.environ.get('DEPENDENCY_CHECK_HOME', os.path.expanduser('~/.local/dependency-check')).rstrip(os.sep)
 
 
-def mainloop(parser, args):
-    """Implementation of this command."""
-    print(repr(args))
+def install():
+    """Install the ZIP release."""
+    dc_home = install_path()
+    dc_command = os.path.join(dc_home, 'bin', 'dependency-check' + ('.bat' if sys.platform == 'win32' else '.sh'))
+
+    if not os.path.isfile(dc_command):
+        # Install `dependency-check-cli` release
+        dc_url = os.environ.get('DEPENDENCY_CHECK_URL', DEPENDENCY_CHECK_URL)
+        dc_version = os.environ.get('DEPENDENCY_CHECK_VERSION', DEPENDENCY_CHECK_VERSION)
+        dc_url = dc_url.format(version=dc_version)
+
+        with tempfile.NamedTemporaryFile(suffix='.zip', prefix='dependency-check-', delete=False) as zip_temp:
+            try:
+                print("Downloading {}...".format(dc_url))
+                with closing(urllib2.urlopen(dc_url)) as url_handle:
+                    shutil.copyfileobj(url_handle, zip_temp)
+                zip_temp.close()
+
+                print("Unpacking {} to {}...".format(zip_temp.name, dc_home))
+                if not os.path.isdir(dc_home):
+                    os.makedirs(dc_home)
+                with closing(zipfile.ZipFile(zip_temp.name)) as zip_handle:
+                    for member in zip_handle.infolist():
+                        out_path = dc_home + os.sep + member.filename.split('/', 1)[1]
+                        if member.filename.endswith('/'):
+                            if not os.path.isdir(out_path):
+                                os.makedirs(out_path)
+                        else:
+                            with closing(zip_handle.open(member)) as inp:
+                                with open(out_path, 'wb') as out:
+                                    shutil.copyfileobj(inp, out)
+                os.chmod(os.path.join(dc_home, 'bin', 'dependency-check.sh'), 0755)
+            finally:
+                if os.path.exists(zip_temp.name):
+                    os.remove(zip_temp.name)
+
+    return dc_command
 
 
 def run():
     """Execute main loop."""
     try:
-        setup()
-        try:
-            parser, args = make_argparser()
-            mainloop(parser, args)
-        except KeyboardInterrupt as exc:
-            sys.stderr.flush()
-            sys.exit(2)
-        except IOError as exc:
-            if exc.errno == errno.EPIPE:  # downstream is done with our output
-                sys.stderr.flush()
-                sys.exit(0)
-            else:
-                raise
-    finally:
-        logging.shutdown()
+        # Delegate to `dependency-check-cli`
+        dc_command = install()
+        sys.exit(subprocess.call([dc_command] + sys.argv[1:]))
+    except KeyboardInterrupt:
+        sys.stderr.flush()
+        sys.exit(2)
 
 
 if __name__ == '__main__':
