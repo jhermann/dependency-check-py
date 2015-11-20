@@ -21,9 +21,30 @@ To install from PyPI, add ``dependency-check`` to your ``dev-requirements.txt``
 or a similar file. For more installation options, see the next section.
 
 To just get the ``dependency-check`` CLI tool installed into your home,
-you can use the `pip script installer`_.
+independant of any project, you can use the `pip script installer`_.
 
-Please see the `DependencyCheck site`_ for more configuration and usage details.
+On first use, the release archive is automatically downloaded and installed once,
+for all projects. Please see the `DependencyCheck site`_ for more configuration and usage details.
+
+
+Customization
+-------------
+
+Using environment variables, you can change the version and download location of the release archive,
+and the directory for the local installation.
+
+=============================== ==============================================================================================
+Variable                        Default
+=============================== ==============================================================================================
+``DEPENDENCY_CHECK_VERSION``    ``1.3.1``
+``DEPENDENCY_CHECK_URL``        ``https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip``
+``DEPENDENCY_CHECK_HOME``       ``~/.local/dependency-check``
+=============================== ==============================================================================================
+
+To update to a new version,
+delete ``~/.local/dependency-check/bin/``,
+set ``DEPENDENCY_CHECK_VERSION`` to the new version number,
+and call ``dependency-check``.
 
 
 Installation
