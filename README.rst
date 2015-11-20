@@ -26,6 +26,8 @@ independant of any project, you can use the `pip script installer`_.
 On first use, the release archive is automatically downloaded and installed once,
 for all projects. Please see the `DependencyCheck site`_ for more configuration and usage details.
 
+ |Installation Demo|
+
 
 Customization
 -------------
@@ -74,6 +76,8 @@ to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Wind
 .. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
 .. _`DependencyCheck site`: https://www.owasp.org/index.php/OWASP_Dependency_Check
 .. _`pip script installer`: https://github.com/mitsuhiko/pipsi#pipsi
+
+.. |Installation Demo| image:: https://raw.githubusercontent.com/jhermann/dependency-check-py/master/dependency_check.gif
 
 .. |Travis CI| image:: https://api.travis-ci.org/jhermann/dependency-check-py.svg
     :target: https://travis-ci.org/jhermann/dependency-check-py
