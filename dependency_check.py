@@ -85,12 +85,28 @@ def install():
     return dc_command
 
 
+def dc_opts():
+    """Return additional options to inject into the dependency-check command."""
+    opts = []
+    nvd_base_url = os.environ.get('DEPENDENCY_CHECK_NVD_URL', '').rstrip('/')
+
+    if nvd_base_url:
+        opts.extend([
+            '--cveUrl12Modified', '{}/nvdcve-Modified.xml'.format(nvd_base_url),
+            '--cveUrl20Modified', '{}/nvdcve-2.0-Modified.xml'.format(nvd_base_url),
+            '--cveUrl12Base', '{}/nvdcve-%d.xml'.format(nvd_base_url),
+            '--cveUrl20Base', '{}/nvdcve-2.0-%d.xml'.format(nvd_base_url),
+        ])
+
+    return opts
+
+
 def run():
     """Execute main loop."""
     try:
         # Delegate to `dependency-check-cli`
         dc_command = install()
-        sys.exit(subprocess.call([dc_command] + sys.argv[1:]))
+        sys.exit(subprocess.call([dc_command] + dc_opts() + sys.argv[1:]))
     except KeyboardInterrupt:
         sys.stderr.flush()
         sys.exit(2)

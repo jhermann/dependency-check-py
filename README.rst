@@ -44,12 +44,18 @@ Variable                        Default
 ``DEPENDENCY_CHECK_VERSION``    ``1.3.1``
 ``DEPENDENCY_CHECK_URL``        ``https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip``
 ``DEPENDENCY_CHECK_HOME``       ``~/.local/dependency-check``
+``DEPENDENCY_CHECK_NVD_URL``    *Use NIST NVD URLs*
 =============================== ==============================================================================================
 
 To update to a new version of the OWASP software,
 delete ``~/.local/dependency-check/bin/``,
 set ``DEPENDENCY_CHECK_VERSION`` to the new version number,
 and call ``dependency-check``.
+
+The variable ``DEPENDENCY_CHECK_NVD_URL`` can be used to point to a local copy of the various NVD feeds,
+in a flat hierarchy with uncompressed XML files
+(if you set this, the options ``--cveUrl12Modified``, ``--cveUrl20Modified``, ``--cveUrl12Base``, and
+``--cveUrl20Base`` will be added to each call).
 
 
 Installation
