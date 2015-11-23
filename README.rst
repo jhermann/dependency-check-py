@@ -12,19 +12,23 @@ Shim to easily install the `OWASP dependency-check-cli`_ tool into Python projec
 ``dependency-check`` scans application dependencies and checks whether they contain any published vulnerabilities
 (based on the NIST `NVD`_).
 It runs in the JVM, so you need some form of ``java`` available in your ``PATH``.
+The script should work on Linux, Mac OSX and Windows, but right now is only tested on Linux.
 
 
 Usage
 -----
+
+After installation, you'll have the ``dependency-check`` command available that, on first use,
+will automatically download and install the OWASP release archive once for all projects.
+It'll then redirect any calls to that installation, meaning the downloaded NVD data is shared
+amongst projects.
+Please see the `DependencyCheck site`_ for more configuration and usage details.
 
 To install from PyPI, add ``dependency-check`` to your ``dev-requirements.txt``
 or a similar file. For more installation options, see the next section.
 
 To just get the ``dependency-check`` CLI tool installed into your home,
 independant of any project, you can use the `pip script installer`_.
-
-On first use, the release archive is automatically downloaded and installed once,
-for all projects. Please see the `DependencyCheck site`_ for more configuration and usage details.
 
  |Installation Demo|
 
@@ -43,7 +47,7 @@ Variable                        Default
 ``DEPENDENCY_CHECK_HOME``       ``~/.local/dependency-check``
 =============================== ==============================================================================================
 
-To update to a new version,
+To update to a new version of the OWASP software,
 delete ``~/.local/dependency-check/bin/``,
 set ``DEPENDENCY_CHECK_VERSION`` to the new version number,
 and call ``dependency-check``.
