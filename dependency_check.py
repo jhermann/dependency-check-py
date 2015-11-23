@@ -56,12 +56,12 @@ def install():
 
         with tempfile.NamedTemporaryFile(suffix='.zip', prefix='dependency-check-', delete=False) as zip_temp:
             try:
-                print("Downloading {}...".format(dc_url))
+                print("Downloading '{}'...".format(dc_url))
                 with closing(urllib2.urlopen(dc_url)) as url_handle:
                     shutil.copyfileobj(url_handle, zip_temp)
                 zip_temp.close()
 
-                print("Unpacking {} to {}...".format(zip_temp.name, dc_home))
+                print("Unpacking '{}' to '{}'...".format(zip_temp.name, dc_home))
                 if not os.path.isdir(dc_home):
                     os.makedirs(dc_home)
                 with closing(zipfile.ZipFile(zip_temp.name)) as zip_handle:
@@ -78,7 +78,7 @@ def install():
                 install_ok = True
             finally:
                 if not install_ok and os.path.exists(dc_command):
-                    os.remove(dc_command)
+                    os.remove(dc_command)  # mark failed install as incomplete
                 if os.path.exists(zip_temp.name):
                     os.remove(zip_temp.name)
 
