@@ -26,7 +26,10 @@ __author_email__ = 'jh@web.de'
 import os
 import sys
 import shutil
-import urllib2
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 import zipfile
 import tempfile
 import subprocess
@@ -57,7 +60,7 @@ def install():
         with tempfile.NamedTemporaryFile(suffix='.zip', prefix='dependency-check-', delete=False) as zip_temp:
             try:
                 print("Downloading '{}'...".format(dc_url))
-                with closing(urllib2.urlopen(dc_url)) as url_handle:
+                with closing(urlopen(dc_url)) as url_handle:
                     shutil.copyfileobj(url_handle, zip_temp)
                 zip_temp.close()
 
