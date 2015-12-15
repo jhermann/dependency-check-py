@@ -74,7 +74,7 @@ def install():
                             with closing(zip_handle.open(member)) as inp:
                                 with open(out_path, 'wb') as out:
                                     shutil.copyfileobj(inp, out)
-                os.chmod(os.path.join(dc_home, 'bin', 'dependency-check.sh'), 0755)
+                os.chmod(os.path.join(dc_home, 'bin', 'dependency-check.sh'), 0o755)
                 install_ok = True
             finally:
                 if not install_ok and os.path.exists(dc_command):
