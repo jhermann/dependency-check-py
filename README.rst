@@ -77,7 +77,7 @@ As a developer, to create a working directory for this project, call these comma
     invoke build check
 
 You might also need to follow some
-`setup procedures <https://py-generic-project.readthedocs.org/en/latest/installing.html#quick-setup>`_
+`setup procedures <https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup>`_
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
 
