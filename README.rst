@@ -6,7 +6,12 @@ dependency-check
 
 Shim to easily install the `OWASP dependency-check-cli`_ tool into Python projects.
 
+.. contents:: **Table of Contents**
+
 .. _setup-start:
+
+Overview
+--------
 
 ``dependency-check`` scans application dependencies and checks whether they contain any published vulnerabilities
 (based on the NIST `NVD`_).
@@ -80,6 +85,14 @@ You might also need to follow some
 `setup procedures <https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup>`_
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
+
+Other Python Security Tools
+---------------------------
+
+ * `openstack/bandit`_ – Security linter designed to find common security issues in Python code, by static AST analysis.
+
+
+.. _`openstack/bandit`: https://github.com/openstack/bandit
 
 .. _`NVD`: https://nvd.nist.gov/
 .. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
