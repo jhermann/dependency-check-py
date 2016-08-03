@@ -89,7 +89,7 @@ to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Wind
 Other Python Security Tools
 ---------------------------
 
- * `openstack/bandit`_ – Security linter designed to find common security issues in Python code, by static AST analysis.
+* `openstack/bandit`_ – Security linter designed to find common security issues in Python code, by static AST analysis.
 
 
 .. _`openstack/bandit`: https://github.com/openstack/bandit
