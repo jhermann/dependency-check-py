@@ -72,7 +72,7 @@ To get a bleeding-edge version from source, use these commands::
 
     repo="jhermann/dependency-check-py"
     pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    pip install -UI -e "git+https://github.com/$repo.git#egg=dependency-check"
+    pip install -U -e "git+https://github.com/$repo.git#egg=dependency-check"
 
 As a developer, to create a working directory for this project, call these commands::
 
