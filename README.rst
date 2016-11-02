@@ -90,9 +90,12 @@ Other Python Security Tools
 ---------------------------
 
 * `openstack/bandit`_ – Security linter designed to find common security issues in Python code, by static AST analysis.
-
+* `pyupio/safety`_ – Safety checks your installed dependencies for known security vulnerabilities.
+  * `pyupio/safety-db`_ – A curated database of security vulnerabilities in Python packages.
 
 .. _`openstack/bandit`: https://github.com/openstack/bandit
+.. _`pyupio/safety`: https://github.com/pyupio/safety
+.. _`pyupio/safety-db`: https://github.com/pyupio/safety-db
 
 .. _`NVD`: https://nvd.nist.gov/
 .. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
