@@ -32,7 +32,8 @@ To install from PyPI, add ``dependency-check`` to your ``dev-requirements.txt``
 or a similar file. For more installation options, see the next section.
 
 To just get the ``dependency-check`` CLI tool installed into your home,
-independant of any project, you can use the `pip script installer`_.
+independant of any project, you can use the `pip script installer`_ or
+``pip install --user dependency-check``.
 
  |Installation Demo|
 
