@@ -35,3 +35,7 @@ nosetests.xml
 .project
 .pydevproject
 .cache/
+
+# Tests
+coverage.xml
+htmlcov/
