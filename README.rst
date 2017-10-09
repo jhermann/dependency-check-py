@@ -1,7 +1,7 @@
 dependency-check
 ================
 
- |Travis CI|  |GitHub Issues|  |License|  |Latest Version|  |Downloads|
+ |Travis CI|  |GitHub Issues|  |License|  |Latest Version|
 
 
 Shim to easily install the `OWASP dependency-check-cli`_ tool into Python projects.
