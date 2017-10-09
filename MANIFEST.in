@@ -3,4 +3,4 @@
 #
 # More at https://docs.python.org/2/distutils/sourcedist.html
 
-include LICENSE requirements.txt *-requirements.txt *.py .env .gitignore
+include LICENSE requirements.txt *-requirements.txt *.rst *.py .env .gitignore
