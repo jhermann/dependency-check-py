@@ -68,13 +68,13 @@ def install():
                 if not os.path.isdir(dc_home):
                     os.makedirs(dc_home)
                 with closing(zipfile.ZipFile(zip_temp.name)) as zip_handle:
-                    for member in zip_handle.infolist():
+                    for member in zip_handle.infolist():  # bogus pylint: disable=no-member
                         out_path = dc_home + os.sep + member.filename.split('/', 1)[1]
                         if member.filename.endswith('/'):
                             if not os.path.isdir(out_path):
                                 os.makedirs(out_path)
                         else:
-                            with closing(zip_handle.open(member)) as inp:
+                            with closing(zip_handle.open(member)) as inp:  # bogus pylint: disable=no-member
                                 with open(out_path, 'wb') as out:
                                     shutil.copyfileobj(inp, out)
                 os.chmod(os.path.join(dc_home, 'bin', 'dependency-check.sh'), 0o755)

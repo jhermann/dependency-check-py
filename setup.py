@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=locally-disabled, invalid-name
+# pylint: disable=locally-disabled, invalid-name, wrong-import-position
 """
     dependency-check - Shim to easily install OWASP dependency-check-cli into Python projects.
 
