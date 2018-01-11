@@ -96,12 +96,14 @@ Other Python Security Tools
   * `pyupio/safety-db`_ – A curated database of security vulnerabilities in Python packages.
 
 * `eliasgranderubio/dagda`_ – Static analysis of known vulnerabilities, trojans, viruses, malware & other malicious threats in Docker images, and runtime monitoring of containers for anomalous activities.
+* `anchore/anchore-engine`_ – A service for inspection, analysis and certification of container images, provided as a ready-to-deploy Docker container image.
 
 
 .. _`openstack/bandit`: https://github.com/openstack/bandit
 .. _`pyupio/safety`: https://github.com/pyupio/safety
 .. _`pyupio/safety-db`: https://github.com/pyupio/safety-db
 .. _`eliasgranderubio/dagda`: https://github.com/eliasgranderubio/dagda
+.. _`anchore/anchore-engine`: https://github.com/anchore/anchore-engine
 
 .. _`NVD`: https://nvd.nist.gov/
 .. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
