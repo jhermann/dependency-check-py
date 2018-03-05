@@ -120,11 +120,11 @@ Other Python Security Tools
     :target: https://github.com/jhermann/dependency-check-py/issues
 .. |License| image:: https://img.shields.io/pypi/l/dependency-check.svg
     :target: https://github.com/jhermann/dependency-check-py/blob/master/LICENSE
-.. |Development Status| image:: https://pypip.in/status/dependency-check/badge.svg
+.. |Development Status| image:: https://img.shields.io/pypi/status/dependency-check.svg
     :target: https://pypi.python.org/pypi/dependency-check/
 .. |Latest Version| image:: https://img.shields.io/pypi/v/dependency-check.svg
     :target: https://pypi.python.org/pypi/dependency-check/
-.. |Download format| image:: https://pypip.in/format/dependency-check/badge.svg
+.. |Download format| image:: https://img.shields.io/pypi/format/dependency-check.svg
     :target: https://pypi.python.org/pypi/dependency-check/
 .. |Downloads| image:: https://img.shields.io/pypi/dw/dependency-check.svg
     :target: https://pypi.python.org/pypi/dependency-check/
