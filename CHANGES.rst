@@ -2,6 +2,7 @@
 Changelog
 =========
 
+* :support:`0` Update default upstream version to 3.3.0 (from 3.1.0)
 * :support:`0` Update default upstream version to 3.1.0 (from 2.1.1)
 
 * :release:`0.2.0 <2017-10-09>`
