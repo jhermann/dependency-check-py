@@ -36,7 +36,7 @@ import subprocess
 from contextlib import closing
 
 
-DEPENDENCY_CHECK_VERSION = '3.3.0'
+DEPENDENCY_CHECK_VERSION = '4.0.2'
 DEPENDENCY_CHECK_URL = 'https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip'
 
 
