@@ -26,6 +26,12 @@ After installation, you'll have the ``dependency-check`` command available that,
 will automatically download and install the OWASP release archive once for all projects.
 It'll then redirect any calls to that installation, meaning the downloaded NVD data is shared
 amongst projects.
+
+.. code-block::
+
+    dependency-check --disableAssembly -s . -o build --project "$(python ./setup.py --name)" \
+        && xdg-open build/dependency-check-report.html
+
 Please see the `DependencyCheck site`_ for more configuration and usage details.
 
 To install from PyPI, add ``dependency-check`` to your ``dev-requirements.txt``
