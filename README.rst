@@ -53,7 +53,7 @@ and the directory for the local installation.
 =============================== ==============================================================================================
 Variable                        Default
 =============================== ==============================================================================================
-``DEPENDENCY_CHECK_VERSION``    ``4.0.2``
+``DEPENDENCY_CHECK_VERSION``    ``5.1.1``
 ``DEPENDENCY_CHECK_URL``        ``https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip``
 ``DEPENDENCY_CHECK_HOME``       ``~/.local/dependency-check``
 ``DEPENDENCY_CHECK_NVD_URL``    *Use NIST NVD URLs*
