@@ -6,15 +6,15 @@ invoke==1.2.0
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
 
-pytest==4.3.0
-pytest-cov==2.6.1
-pytest-mock==1.10.1
+pytest==5.0.1
+pytest-cov==2.7.1
+pytest-mock==1.10.4
 pytest-spec==1.1.0
-tox==3.7.0
-pylint==1.7.4
-bpython==0.17.1
+tox==3.13.2
+pylint==2.3.1
+bpython==0.18
 yolk3k==0.9
-pip-upgrader==1.4.2
+pip-upgrader==1.4.15
 
 twine==1.13.0
 
