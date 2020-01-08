@@ -55,8 +55,7 @@ project = dict(
 
 classifiers = """
 # Details at http://pypi.python.org/pypi?:action=list_classifiers
-Development Status :: 4 - Beta
-#Development Status :: 5 - Production/Stable
+Development Status :: 5 - Production/Stable
 Programming Language :: Python
 Programming Language :: Python :: 2
 Programming Language :: Python :: 2.7
