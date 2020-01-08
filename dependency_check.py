@@ -91,14 +91,13 @@ def install():
 def dc_opts():
     """Return additional options to inject into the dependency-check command."""
     opts = []
-    nvd_base_url = os.environ.get('DEPENDENCY_CHECK_NVD_URL', '').rstrip('/')
+    # Default: https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-%d.json.gz
+    nvd_base_url = os.environ.get('DEPENDENCY_CHECK_NVD_URL', '')
 
     if nvd_base_url:
         opts.extend([
-            '--cveUrl12Modified', '{}/nvdcve-Modified.xml'.format(nvd_base_url),
-            '--cveUrl20Modified', '{}/nvdcve-2.0-Modified.xml'.format(nvd_base_url),
-            '--cveUrl12Base', '{}/nvdcve-%d.xml'.format(nvd_base_url),
-            '--cveUrl20Base', '{}/nvdcve-2.0-%d.xml'.format(nvd_base_url),
+            '--cveUrlBase', nvd_base_url,
+            '--cveUrlModified', nvd_base_url.replace('%d', 'modified'),
         ])
 
     return opts

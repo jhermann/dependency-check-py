@@ -2,8 +2,10 @@
 Changelog
 =========
 
-* :release:`0.5.0 <2020-01-10>`
+* :release:`0.5.0 <2020-01-08>`
 * :support:`0` Update default upstream version to 5.2.4
+* :support:`0` You MUST update your local installation to a 5.x version (see README)
+* :support:`0` You MUST also update ``DEPENDENCY_CHECK_NVD_URL`` in case you've set that, and the mirror it points to (use JSON compressed data files instead of XML)
 
 * :release:`0.2.0 <2017-10-09>`
 * :support:`0` Update default upstream version to 2.1.1 (from 1.3.1)

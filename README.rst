@@ -65,9 +65,16 @@ set ``DEPENDENCY_CHECK_VERSION`` to the new version number,
 and call ``dependency-check``.
 
 The variable ``DEPENDENCY_CHECK_NVD_URL`` can be used to point to a local copy of the various NVD feeds,
-in a flat hierarchy with uncompressed XML files
-(if you set this, the options ``--cveUrl12Modified``, ``--cveUrl20Modified``, ``--cveUrl12Base``, and
-``--cveUrl20Base`` will be added to each call).
+in a flat hierarchy with compressed JSON files.
+
+.. code-block:: shell
+
+    export DEPENDENCY_CHECK_NVD_URL='https://repo.local/nvd/nvdcve-1.0-%d.json.gz
+
+If you set this, the options ``--cveUrlBase`` and ``--cveUrlModified`` will be added to each call.
+Note that the ``%d`` representing the year is replaced by ``modified`` for the latter.
+
+Remove the ``~/.local/dependency-check/data/`` directory to force a full data reload.
 
 
 Installation
