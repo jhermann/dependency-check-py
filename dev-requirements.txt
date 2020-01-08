@@ -10,8 +10,8 @@ pytest==4.6.9
 pytest-cov==2.8.1
 pytest-mock==2.0.0
 pytest-spec==2.0.0
-tox==3.14.3
-pylint==2.4.4
+tox==3.13.2
+pylint==1.9.5
 bpython==0.18
 yolk3k==0.9
 pip-upgrader==1.4.15
