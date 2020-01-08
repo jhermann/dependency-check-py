@@ -2,7 +2,7 @@
 """
     dependency-check - Shim to easily install OWASP dependency-check-cli into Python projects.
 
-    Copyright ©  2015 – 2017 Jürgen Hermann <jh@web.de>
+    Copyright ©  2015 – 2020 Jürgen Hermann <jh@web.de>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 """
 from __future__ import absolute_import, unicode_literals, print_function
 
-__version__ = '0.2.1'
+__version__ = '0.5.0'
 __author__ = 'Jürgen Hermann'
 __author_email__ = 'jh@web.de'
 
@@ -36,7 +36,7 @@ import subprocess
 from contextlib import closing
 
 
-DEPENDENCY_CHECK_VERSION = '5.1.1'
+DEPENDENCY_CHECK_VERSION = '5.2.4'
 DEPENDENCY_CHECK_URL = 'https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip'
 
 

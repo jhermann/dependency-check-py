@@ -3,7 +3,7 @@
 #
 
 invoke==1.4.0
-rituals==0.3.0
+rituals==0.4.1
 #-e git+https://github.com/jhermann/rituals.git#egg=rituals
 
 pytest==5.3.2

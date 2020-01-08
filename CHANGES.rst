@@ -2,9 +2,8 @@
 Changelog
 =========
 
-* :support:`0` Update default upstream version to 4.0.2 (from 3.3.0)
-* :support:`0` Update default upstream version to 3.3.0 (from 3.1.0)
-* :support:`0` Update default upstream version to 3.1.0 (from 2.1.1)
+* :release:`0.5.0 <2020-01-10>`
+* :support:`0` Update default upstream version to 5.2.4
 
 * :release:`0.2.0 <2017-10-09>`
 * :support:`0` Update default upstream version to 2.1.1 (from 1.3.1)
