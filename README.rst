@@ -69,7 +69,7 @@ in a flat hierarchy with compressed JSON files.
 
 .. code-block:: shell
 
-    export DEPENDENCY_CHECK_NVD_URL='https://repo.local/nvd/nvdcve-1.0-%d.json.gz
+    export DEPENDENCY_CHECK_NVD_URL='https://repo.local/nvd/nvdcve-1.0-%d.json.gz'
 
 If you set this, the options ``--cveUrlBase`` and ``--cveUrlModified`` will be added to each call.
 Note that the ``%d`` representing the year is replaced by ``modified`` for the latter.
