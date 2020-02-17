@@ -10,6 +10,12 @@ Shim to easily install the `OWASP dependency-check-cli`_ tool into Python projec
 
 .. _setup-start:
 
+:Code:          https://github.com/jhermann/dependency-check-py#readme
+:Docs:          https://github.com/jeremylong/dependencycheck#readme
+:CI:            https://travis-ci.org/jhermann/dependency-check-py
+:Issues:        https://github.com/jhermann/dependency-check-py/issues
+
+
 Overview
 --------
 
@@ -35,11 +41,7 @@ amongst projects.
 Please see the `DependencyCheck site`_ for more configuration and usage details.
 
 To install from PyPI, add ``dependency-check`` to your ``dev-requirements.txt``
-or a similar file. For more installation options, see the next section.
-
-To just get the ``dependency-check`` CLI tool installed into your home,
-independent of any project, you can use the `pip script installer`_ or
-``pip install --user dependency-check``.
+or a similar file. For more installation options, see the “Installation” section below.
 
  |Installation Demo|
 
@@ -80,20 +82,25 @@ Remove the ``~/.local/dependency-check/data/`` directory to force a full data re
 Installation
 ------------
 
-*dependency-check* can be installed via ``pip install dependency-check`` as usual,
-see `releases <https://github.com/jhermann/dependency-check-py/releases>`_ for an overview of available versions.
+To just get the ``dependency-check`` CLI tool installed into your home,
+independent of any project, call ``python3 -m pip install --user dependency-check`` as usual,
+see `releases`_ for an overview of available versions.
+
+If you prefer an **isolated and easily removable venv installation**,
+consider using `dephell jail install dependency-check`_ instead.
+
 To get a bleeding-edge version from source, use these commands::
 
     repo="jhermann/dependency-check-py"
-    pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    pip install -U -e "git+https://github.com/$repo.git#egg=dependency-check"
+    python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+    python3 -m pip install "https://github.com/$repo/archive/master.zip#egg=dependency-check"
 
 As a developer, to create a working directory for this project, call these commands::
 
     git clone "https://github.com/jhermann/dependency-check-py.git"
     cd "dependency-check-py"
-    . .env --yes --develop
-    invoke build check
+    command . .env --yes --develop
+    invoke build --docs test check
 
 You might also need to follow some
 `setup procedures <https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup>`_
@@ -122,9 +129,11 @@ Other Python Security Tools
 .. _`vintasoftware/python-linters-and-code-analysis`: https://github.com/vintasoftware/python-linters-and-code-analysis
 
 .. _`NVD`: https://nvd.nist.gov/
-.. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#dependency-check
+.. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#readme
 .. _`DependencyCheck site`: https://www.owasp.org/index.php/OWASP_Dependency_Check
 .. _`pip script installer`: https://github.com/mitsuhiko/pipsi#pipsi
+.. _`releases`: https://github.com/jhermann/dependency-check-py/releases
+.. _`dephell jail install new-script`: https://dephell.readthedocs.io/cmd-jail-install.html
 
 .. |Installation Demo| image:: https://raw.githubusercontent.com/jhermann/dependency-check-py/master/dependency_check.gif
 
