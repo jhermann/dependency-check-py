@@ -1,8 +1,10 @@
+# pylint: disable=missing-function-docstring
+"""
+    Test the CLI.
+"""
 import os
 import shutil
 import tempfile
-
-import pytest
 
 import dependency_check
 

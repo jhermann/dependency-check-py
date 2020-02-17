@@ -1,2 +1,5 @@
-"""py.test Configuration Module."""
+# pylint: disable=unused-import
+"""
+    py.test Configuration Module.
+"""
 import pytest
