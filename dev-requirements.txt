@@ -4,7 +4,7 @@
 
 invoke==1.4.0
 rituals==0.4.1
-#-e git+https://github.com/jhermann/rituals.git#egg=rituals
+#https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 
 pytest==4.6.9
 pytest-cov==2.8.1
