@@ -133,7 +133,7 @@ Other Python Security Tools
 .. _`DependencyCheck site`: https://www.owasp.org/index.php/OWASP_Dependency_Check
 .. _`pip script installer`: https://github.com/mitsuhiko/pipsi#pipsi
 .. _`releases`: https://github.com/jhermann/dependency-check-py/releases
-.. _`dephell jail install new-script`: https://dephell.readthedocs.io/cmd-jail-install.html
+.. _`dephell jail install dependency-check`: https://dephell.readthedocs.io/cmd-jail-install.html
 
 .. |Installation Demo| image:: https://raw.githubusercontent.com/jhermann/dependency-check-py/master/dependency_check.gif
 
