@@ -18,7 +18,7 @@
 """
 from __future__ import absolute_import, unicode_literals, print_function
 
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 __author__ = 'Jürgen Hermann'
 __author_email__ = 'jh@web.de'
 
@@ -36,8 +36,8 @@ import subprocess
 from contextlib import closing
 
 
-DEPENDENCY_CHECK_VERSION = '5.2.4'
-DEPENDENCY_CHECK_URL = 'https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip'
+DEPENDENCY_CHECK_VERSION = '6.0.2'
+DEPENDENCY_CHECK_URL = 'https://github.com/jeremylong/DependencyCheck/releases/download/v{version}/dependency-check-{version}-release.zip'
 
 
 def install_path():

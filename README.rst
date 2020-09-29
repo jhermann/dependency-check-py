@@ -55,8 +55,8 @@ and the directory for the local installation.
 =============================== ==============================================================================================
 Variable                        Default
 =============================== ==============================================================================================
-``DEPENDENCY_CHECK_VERSION``    ``5.2.4``
-``DEPENDENCY_CHECK_URL``        ``https://bintray.com/artifact/download/jeremy-long/owasp/dependency-check-{version}-release.zip``
+``DEPENDENCY_CHECK_VERSION``    ``6.0.2``
+``DEPENDENCY_CHECK_URL``        ``https://github.com/jeremylong/DependencyCheck/releases/download/v{version}/dependency-check-{version}-release.zip``
 ``DEPENDENCY_CHECK_HOME``       ``~/.local/dependency-check``
 ``DEPENDENCY_CHECK_NVD_URL``    *Use NIST NVD URLs*
 =============================== ==============================================================================================
@@ -71,7 +71,7 @@ in a flat hierarchy with compressed JSON files.
 
 .. code-block:: shell
 
-    export DEPENDENCY_CHECK_NVD_URL='https://repo.local/nvd/nvdcve-1.0-%d.json.gz'
+    export DEPENDENCY_CHECK_NVD_URL='https://repo.local/nvd/nvdcve-1.1-%d.json.gz'
 
 If you set this, the options ``--cveUrlBase`` and ``--cveUrlModified`` will be added to each call.
 Note that the ``%d`` representing the year is replaced by ``modified`` for the latter.

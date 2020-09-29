@@ -2,6 +2,13 @@
 Changelog
 =========
 
+* :release:`0.6.0 <2020-09-29>`
+* :support:`0` Update default upstream version to 6.0.2
+* :support:`0` Changed download URLs to new GitHub hosting
+* :support:`0` Changed data URLs to v1.1 JSON format
+* Adapt or unset any environment variables you have, and do a full re-install
+  with a full data retrieval (``rm -rf ~/.local/dependency-check/``)
+
 * :release:`0.5.0 <2020-01-08>`
 * :support:`0` Update default upstream version to 5.2.4
 * :support:`0` You MUST update your local installation to a 5.x version (see README)
