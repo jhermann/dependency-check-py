@@ -36,6 +36,7 @@ amongst projects.
 .. code-block::
 
     dependency-check --disableAssembly -s . -o build --project "$(python ./setup.py --name)" \
+        --exclude ".git/**" --exclude ".venv/**" --exclude "**/__pycache__/**" --exclude ".tox/**" \
         && xdg-open build/dependency-check-report.html
 
 Please see the `DependencyCheck site`_ for more configuration and usage details.
