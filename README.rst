@@ -56,7 +56,7 @@ and the directory for the local installation.
 =============================== ==============================================================================================
 Variable                        Default
 =============================== ==============================================================================================
-``DEPENDENCY_CHECK_VERSION``    ``6.0.2``
+``DEPENDENCY_CHECK_VERSION``    ``6.2.2``
 ``DEPENDENCY_CHECK_URL``        ``https://github.com/jeremylong/DependencyCheck/releases/download/v{version}/dependency-check-{version}-release.zip``
 ``DEPENDENCY_CHECK_HOME``       ``~/.local/dependency-check``
 ``DEPENDENCY_CHECK_NVD_URL``    *Use NIST NVD URLs*

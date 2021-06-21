@@ -36,7 +36,7 @@ import subprocess
 from contextlib import closing
 
 
-DEPENDENCY_CHECK_VERSION = '6.0.2'
+DEPENDENCY_CHECK_VERSION = '6.2.2'
 DEPENDENCY_CHECK_URL = 'https://github.com/jeremylong/DependencyCheck/releases/download/v{version}/dependency-check-{version}-release.zip'
 
 
