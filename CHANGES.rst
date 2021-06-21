@@ -3,7 +3,7 @@ Changelog
 =========
 
 * :release:`0.6.0 <2021-06-21>`
-* :support:`7` Update default upstream version to 6.2.2
+* :support:`8` Update default upstream version to 6.2.2
 * :support:`7` Changed download URLs to new GitHub hosting
 * :support:`0` Changed data URLs to v1.1 JSON format
 * Adapt or unset any environment variables you have, and do a full re-install
