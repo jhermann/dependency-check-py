@@ -118,6 +118,7 @@ Other Python Security Tools
 
 * `eliasgranderubio/dagda`_ – Static analysis of known vulnerabilities, trojans, viruses, malware & other malicious threats in Docker images, and runtime monitoring of containers for anomalous activities.
 * `anchore/anchore-engine`_ – A service for inspection, analysis and certification of container images, provided as a ready-to-deploy Docker container image.
+* `sonatype-nexus-community/jake`_ – An OSS Index integration to check your Conda environments for vulnerable Open Source packages.
 
 * `vintasoftware/python-linters-and-code-analysis`_ – Curated list of Python linters and code analysis tools.
 
@@ -128,6 +129,7 @@ Other Python Security Tools
 .. _`eliasgranderubio/dagda`: https://github.com/eliasgranderubio/dagda
 .. _`anchore/anchore-engine`: https://github.com/anchore/anchore-engine
 .. _`vintasoftware/python-linters-and-code-analysis`: https://github.com/vintasoftware/python-linters-and-code-analysis
+.. _`sonatype-nexus-community/jake`: https://github.com/sonatype-nexus-community/jake
 
 .. _`NVD`: https://nvd.nist.gov/
 .. _`OWASP dependency-check-cli`: https://github.com/jeremylong/dependencycheck#readme
