@@ -6,7 +6,7 @@ invoke==1.4.1
 rituals==0.4.1
 #https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 
-pytest==4.6.9
+pytest==9.0.3
 pytest-cov==2.8.1
 pytest-mock==2.0.0
 pytest-spec==2.0.0
